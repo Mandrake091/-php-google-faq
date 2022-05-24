@@ -32,11 +32,11 @@ include 'database.php';
                     <i class="fa-solid fa-list-ul text-end w-25"></i>
                 </div>
                 <div class="row">
-                    <ul class="d-inline"> <?php foreach ($titles as $key => $value) { ?>
-                        <li class='d-inline'>
-                            <?php echo  $key;
-                         }?>
-                        </li>
+                    <ul class="d-inline">
+                        <?php
+                        foreach ($db as $key => $value) {
+                            echo "<li class='d-inline'>$key</li>";
+                    ?>
                     </ul>
                 </div>
             </div>
@@ -45,15 +45,13 @@ include 'database.php';
     <main>
         <div class="container">
             <div class="row">
+
                 <?php
-                foreach ($value as $key => $value) {?>
-                <?php echo $value['title'];
-                }?>
-
-
-
+ foreach ($value as $value) {
+           echo $value;
+             }
+         }?>
             </div>
-
         </div>
     </main>
 </body>
