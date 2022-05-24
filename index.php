@@ -25,33 +25,38 @@ include 'database.php';
 
 <body>
     <header>
-        <nav class="w-100">
-            <div class="container-fluid">
-                <div class="row justify-content-between align-items-center">
-                    <img id="logo" src=" ./img/Google-logo.png" alt="">
-                    <i class="fa-solid fa-list-ul text-end w-25"></i>
-                </div>
-                <div class="row">
-                    <ul class="d-inline">
-                        <?php
+        <nav class="container-fluid">
+            <div class="row">
+                <img id="logo" src=" ./img/Google-logo.png" alt="">
+            </div>
+            <div class="row">
+                <ul class="d-inline d-flex justify-content-between align-items-center m-0">
+                    <?php
                         foreach ($db as $key => $value) {
                             foreach ($value as $k => $item) {
-                            echo "<li class='d-inline'>$k</li>";
-                    }}?>
-                    </ul>
-                </div>
+                                echo "<li class='d-inline'>$k</li>";
+                            }
+                        } ?>
+                </ul>
             </div>
+
+
+
+
+
+
+
         </nav>
     </header>
     <main>
         <div class="container">
-            <div class="row">
+            <div class="row w-75 m-auto">
 
                 <?php
- foreach ($item as $j => $obj) {
-    echo $obj['title'];
-    echo $obj['response'];
-}?>
+                foreach ($item as $j => $obj) {
+                    echo $obj['title'];
+                    echo $obj['response'];
+                } ?>
             </div>
         </div>
     </main>
