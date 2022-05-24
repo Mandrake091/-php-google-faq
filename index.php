@@ -35,8 +35,9 @@ include 'database.php';
                     <ul class="d-inline">
                         <?php
                         foreach ($db as $key => $value) {
-                            echo "<li class='d-inline'>$key</li>";
-                    ?>
+                            foreach ($value as $k => $item) {
+                            echo "<li class='d-inline'>$k</li>";
+                    }}?>
                     </ul>
                 </div>
             </div>
@@ -47,10 +48,10 @@ include 'database.php';
             <div class="row">
 
                 <?php
- foreach ($value as $value) {
-           echo $value;
-             }
-         }?>
+ foreach ($item as $j => $obj) {
+    echo $obj['title'];
+    echo $obj['response'];
+}?>
             </div>
         </div>
     </main>
